@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Elenco delle pizze</title>
+    <title>Elenco Pizze</title>
 </head>
 <body>
-
+<h1>Elenco delle Pizze</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Descrizione</th>
+        <th>Prezzo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pizza : ${pizze}">
+        <td th:text="${pizza.nome}"></td>
+        <td th:text="${pizza.descrizione}"></td>
+        <td th:text="${pizza.prezzo}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
+
+
+
+
