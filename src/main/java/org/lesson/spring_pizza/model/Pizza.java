@@ -1,9 +1,9 @@
-package org.lesson.spring_pizza.controller;
+package org.lesson.spring_pizza.model;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="db_pizze")
+@Table(name="pizze")
 public class Pizza {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
