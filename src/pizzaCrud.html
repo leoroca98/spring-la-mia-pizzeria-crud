@@ -35,5 +35,13 @@
         </tr>
         </thead>
         <tbody>
+        <tr th:each="pizze : ${pizza}">
+            <td th:text="${pizze.name}"></td>
+            <td th:text="${pizze.description}"></td>
+            <td>€ <span th:text="${pizze.price}"></span></td>
+
+
+        </tr>
+        <tbody>
     </table>
 </div>
